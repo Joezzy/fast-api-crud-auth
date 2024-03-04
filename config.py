@@ -1,6 +1,7 @@
 from pydantic_settings import BaseSettings
 
 class Settings(BaseSettings):
+    DATABASE_URL:str
     DATABASE_HOST: str
     DATABASE_POST: str
     DATABASE_NAME: str
@@ -8,7 +9,7 @@ class Settings(BaseSettings):
     DATABASE_PASSWORD: str
     SECRET_KEY: str
     ALGORITHM:  str
-    ACCESS_TOKEN_EXPIRRY: int
+    ACCESS_TOKEN_EXPIRY: int
 
     class Config:
         env_file=".env"
